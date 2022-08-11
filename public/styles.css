@@ -1,3 +1,13 @@
 body{
-    background-color: bisque;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.form {
+    width: 200px;
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-top: 50%;
 }

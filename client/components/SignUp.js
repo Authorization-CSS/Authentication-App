@@ -27,7 +27,7 @@ class SignUp extends React.Component {
     const { name, email, password } = this.state;
     const { handleChange, handleSubmit } = this;
     return (
-      <div>
+      <div className="form">
         <h1>SignUp</h1>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name"> Name </label>

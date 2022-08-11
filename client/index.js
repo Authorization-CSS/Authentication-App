@@ -1,14 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import store from '../client/store';
 import '../public/styles.css';
-import Login from './components/Login'
+import Routes from './components/Routes'
+import { createRoot } from 'react-dom/client';
 
-ReactDOM.render(
-    <Provider store={store}>
-  <Login />
-    </Provider>,
-  document.getElementById('app')
- 
-);
+const container = document.getElementById('app');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<Provider store={store}><Routes/></Provider>);
