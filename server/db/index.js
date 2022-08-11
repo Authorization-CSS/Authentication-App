@@ -1,6 +1,8 @@
-const db = require('./db')
+const sequelize = require('sequelize');
 
-// register models
-require('./models')
+const db = new sequelize('postgres://localhost:5432/boilermaker',
+{
+    logging:false
+})
 
-module.exports = db
+module.exports = db;
