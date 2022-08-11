@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
+
 class SignUp extends React.Component {
   constructor() {
     super();
@@ -28,8 +29,8 @@ class SignUp extends React.Component {
     const { handleChange, handleSubmit } = this;
     return (
       <div className="form">
-        <h1>SignUp</h1>
         <form onSubmit={handleSubmit}>
+        <h3>SignUp</h3>
           <label htmlFor="name"> Name </label>
           <input name="name" type="text" onChange={handleChange} value={name} />
           <label htmlFor="email"> Email </label>
@@ -46,6 +47,7 @@ class SignUp extends React.Component {
             onChange={handleChange}
             value={password}
           />
+          <button type="submit">Sign Up!</button>
         </form>
       </div>
     );

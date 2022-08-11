@@ -1,6 +1,6 @@
 const sequelize = require('sequelize');
 
-const db = new sequelize('postgres://localhost:5432/boilermaker',
+const db = new sequelize('postgres://localhost:5432/authentication-app',
 {
     logging:false
 })

@@ -27,8 +27,8 @@ class Login extends React.Component {
     const { handleChange, handleSubmit } = this;
     return (
       <div className="form">
-        <h1>Login</h1>
         <form onSubmit={handleSubmit}>
+        <h3>Login</h3>
           <label htmlFor="email"> Email </label>
           <input
             name="email"
