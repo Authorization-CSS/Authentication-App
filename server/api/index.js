@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "../../public")));
 app.use("/api", require("./login"));
 app.use("/api", require("./signup"));
+app.use('/api', require('./auth'));
 
 //can we use ./public here instead of the actual html file?
 app.get("*", (req, res, next) => {

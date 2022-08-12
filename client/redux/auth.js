@@ -22,7 +22,7 @@ export const loginThunk = (user) => async (dispatch) => {
   }
 };
 
-export const signupThunk = (user) => async (dispatch) => {
+export const siGnupThunk = (user) => async (dispatch) => {
   try {
     const { data } = await axios.put("/api/signup", user);
     dispatch(createUser(data));

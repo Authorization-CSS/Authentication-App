@@ -1,5 +1,6 @@
 import React from 'react';
 import Login from './Login';
+import Welcome from './Welcome';
 
 class App extends React.Component{
     constructor(){
@@ -42,10 +43,7 @@ class App extends React.Component{
       }
       else {
         return (
-          <div>
-            Welcome { auth.username }
-            <button onClick={ logout }>Logout</button>
-          </div>
+          <Welcome user={auth}/>
         );
       }
     }
