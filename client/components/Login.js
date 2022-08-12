@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import {Link} from 'react-router-dom';
 
 class Login extends React.Component {
   constructor() {
@@ -26,9 +27,9 @@ class Login extends React.Component {
     const { email, password } = this.state;
     const { handleChange, handleSubmit } = this;
     return (
-      <div>
-        <h1>Login</h1>
+      <div className="form">
         <form onSubmit={handleSubmit}>
+        <h3>Login</h3>
           <label htmlFor="email"> Email </label>
           <input
             name="email"
@@ -43,6 +44,8 @@ class Login extends React.Component {
             onChange={handleChange}
             value={password}
           />
+          <button type="submit">Submit</button>
+          <p>Need to Register? Click to <Link to='/signup'>Sign Up</Link></p>
         </form>
       </div>
     );
