@@ -7,6 +7,7 @@ const morgan = require("morgan");
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "../../public")));
+app.use(express.json());
 app.use("/api", require("./login"));
 app.use("/api", require("./signup"));
 app.use('/api', require('./auth'));

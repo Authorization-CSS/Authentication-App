@@ -26,14 +26,16 @@ class App extends React.Component{
         });
         this.setState({ auth: response.data });
       }
+      console.log("NO FUCKING TOKEN");
     }
     componentDidMount(){
-      this.attemptTokenLogin();
+      //this.attemptTokenLogin();
     }
     async signIn(credentials){
-      let response = await axios.post('/api/auth', credentials);
+        console.log("INSIDE AXIOS CALL", credentials);
+      const response = await axios.post('/api/auth', credentials);
       const { token } = response.data;
-      console.log(token);
+      console.log('AFTER AXIOS CALL', token);
       window.localStorage.setItem('token', token);
       this.attemptTokenLogin();
     }

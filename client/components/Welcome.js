@@ -12,10 +12,6 @@ class Welcome extends React.Component {
     }
 }
 
-const mapStateToProps = (user)=>{
-    return {
-        user: state.user
-    }
-}
 
-export default connect(mapStateToProps, null)(Welcome);
+
+export default Welcome;
