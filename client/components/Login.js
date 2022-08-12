@@ -54,8 +54,8 @@ class Login extends React.Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  login: user => dispatch(loginThunk(user))
-});
+// const mapDispatchToProps = dispatch => ({
+//   login: user => dispatch(loginThunk(user))
+// });
 
-export default connect(null, mapDispatchToProps)(Login);
+export default Login;

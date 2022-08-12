@@ -1,6 +1,7 @@
 import React from 'react';
 import Login from './Login';
 import Welcome from './Welcome';
+import axios from 'axios';
 
 class App extends React.Component{
     constructor(){
@@ -32,6 +33,7 @@ class App extends React.Component{
     async signIn(credentials){
       let response = await axios.post('/api/auth', credentials);
       const { token } = response.data;
+      console.log(token);
       window.localStorage.setItem('token', token);
       this.attemptTokenLogin();
     }
@@ -39,7 +41,7 @@ class App extends React.Component{
       const { auth } = this.state;
       const { signIn, logout } = this;
       if(!auth.id){
-        return <Login signIn={ signIn }/>
+        return <Login login={ signIn }/>
       }
       else {
         return (

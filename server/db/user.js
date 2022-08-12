@@ -43,10 +43,10 @@ User.byToken = async(token)=> {
   }
 };
 
-User.authenticate = async({ username, password })=> {
+User.authenticate = async({ email, password })=> {
   const user = await User.findOne({
     where: {
-      username,
+      email,
       password
     }
   });
