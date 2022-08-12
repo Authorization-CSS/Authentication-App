@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 
 class Welcome extends React.Component {
     render(){
+        console.log(this.props);
         return(
             <div>
                 <h1>Welcome {this.props.user.name}</h1>
@@ -11,10 +12,6 @@ class Welcome extends React.Component {
     }
 }
 
-const mapStateToProps = (user)=>{
-    return {
-        user: state.user
-    }
-}
 
-export default connect(mapStateToProps, null)(Welcome);
+
+export default Welcome;

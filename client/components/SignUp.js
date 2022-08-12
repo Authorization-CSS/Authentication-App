@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import {Link} from 'react-router-dom';
+import {signupThunk} from '../redux/auth'
 
 
 class SignUp extends React.Component {
@@ -23,6 +24,7 @@ class SignUp extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    this.props.signUp(this.state);
   }
 
   render() {
@@ -58,7 +60,7 @@ class SignUp extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  signUp: user => dispatch(signUp(user))
+  signUp: user => dispatch(signupThunk(user))
 });
 
 export default connect(null, mapDispatchToProps)(SignUp);

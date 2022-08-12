@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import {Link} from 'react-router-dom';
+import {loginThunk} from '../redux/auth'
 
 class Login extends React.Component {
   constructor() {
@@ -21,6 +22,7 @@ class Login extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    this.props.login(this.state)
   }
 
   render() {
@@ -52,8 +54,8 @@ class Login extends React.Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  login: user => dispatch(login(user))
-});
+// const mapDispatchToProps = dispatch => ({
+//   login: user => dispatch(loginThunk(user))
+// });
 
-export default connect(null, mapDispatchToProps)(Login);
+export default Login;

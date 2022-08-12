@@ -13,7 +13,7 @@ const createUser = (user) => ({
   user,
 });
 
-export const loginUserThunk = (user) => async (dispatch) => {
+export const loginThunk = (user) => async (dispatch) => {
   try {
     const { data } = await axios.post("/api/login", user);
     dispatch(loginUser(data));
@@ -22,7 +22,7 @@ export const loginUserThunk = (user) => async (dispatch) => {
   }
 };
 
-export const createUserThunk = (user) => async (dispatch) => {
+export const signupThunk = (user) => async (dispatch) => {
   try {
     const { data } = await axios.put("/api/signup", user);
     dispatch(createUser(data));
