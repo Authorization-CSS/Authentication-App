@@ -25,6 +25,7 @@ export const loginThunk = (user) => async (dispatch) => {
 export const signupThunk = (user) => async (dispatch) => {
   try {
     const { data } = await axios.put("/api/signup", user);
+    console.log('DATA after axios.put', data)
     dispatch(createUser(data));
   } catch (error) {
     console.log(error);
