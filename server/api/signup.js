@@ -1,11 +1,12 @@
 const router = require("express").Router();
-const { User } = require("../db/user");
+const User  = require("../db/user");
 
 router.put("/signup", async (req, res, next) => {
   try {
-    const { email, password } = req.body;
+    const { name, email, password } = req.body;
     const user = await User.findOrCreate({
       where: {
+        name,
         email,
         password,
       },
